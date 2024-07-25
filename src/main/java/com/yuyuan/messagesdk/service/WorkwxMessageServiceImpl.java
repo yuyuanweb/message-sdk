@@ -45,8 +45,8 @@ public class WorkwxMessageServiceImpl implements MessageService {
             log.error("没有找到配置项中的webhook,请检查：1.是否在application.yml中填写webhook 2.是否在spring环境下运行");
             throw new IllegalArgumentException("没有找到配置项中的webhook");
         }
-        WorkwxBaseMessage<T> WorkwxMessage = new WorkwxBaseMessage<>(messageTypeEnum, content);
-        String messageJson = WorkwxMessage.toJsonStr();
+        WorkwxBaseMessage<T> workwxMessage = new WorkwxBaseMessage<>(messageTypeEnum, content);
+        String messageJson = workwxMessage.toJsonStr();
         String thisWebhook = webhook;
         if (StrUtil.isNotBlank(tempWebhook)) {
             thisWebhook = tempWebhook;
