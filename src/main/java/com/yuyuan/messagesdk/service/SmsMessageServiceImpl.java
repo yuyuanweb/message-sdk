@@ -17,13 +17,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * 消息推送服务实现
+ * 手机短信消息发送类
  *
  * @author gulihua
  */
 @Slf4j
 @Service
-public class SmsMessageServiceImpl implements MessageService{
+public class SmsMessageServiceImpl implements MessageService {
 
     @Value("${tencent.sms.secretId}")
     private String secretId;
@@ -45,9 +45,8 @@ public class SmsMessageServiceImpl implements MessageService{
      * 发送短信
      *
      * @param smsMessage 短信
-     * @return {@link Boolean}
      */
-    public Boolean sendSmsMessage(SmsMessage smsMessage) {
+    public void sendSmsMessage(SmsMessage smsMessage) {
         List<String> phoneNumberSet = smsMessage.getPhoneNumberSet();
         String templateId = smsMessage.getTemplateId();
         List<String> templateParamSet = smsMessage.getTemplateParamSet();
@@ -96,18 +95,12 @@ public class SmsMessageServiceImpl implements MessageService{
             SendSmsResponse res = client.SendSms(req);
             for (SendStatus sendStatus : res.getSendStatusSet()) {
                 Boolean success = "Ok".equalsIgnoreCase(sendStatus.getCode());
-                // 有一个失败就将 allSuccess 置为 false
-                if (!success) {
-                    allSuccess = false;
-                }
                 log.info("手机号为{}的用户短信发送状态:{}", sendStatus.getPhoneNumber(), success);
             }
 
         } catch (TencentCloudSDKException e) {
             log.error("sendSMSMessage failed, e: ", e);
-            return false;
         }
-        return allSuccess;
     }
 
 

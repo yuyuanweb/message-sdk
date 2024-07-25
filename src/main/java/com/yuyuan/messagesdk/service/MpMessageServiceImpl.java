@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 
 /**
- * 服务号消息推送测试
+ * 微信服务号模版消息发送类
  *
  * @author pine
  */
@@ -27,16 +27,13 @@ public class MpMessageServiceImpl implements MessageService {
         return MESSAGE_CLASS;
     }
 
-    public boolean sendMpMessage(MpMessage message) {
+    public void sendMpMessage(MpMessage message) {
         WxMpTemplateMsgService templateMsgService = wxMpService.getTemplateMsgService();
-        String s = null;
         try {
-            s = templateMsgService.sendTemplateMsg(message);
+            templateMsgService.sendTemplateMsg(message);
         } catch (WxErrorException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(s);
-        return true;
     }
 
     @Override

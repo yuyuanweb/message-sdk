@@ -5,6 +5,8 @@ import lombok.Data;
 import java.util.List;
 
 /**
+ * 手机短信消息
+ *
  * @author pine
  */
 @Data

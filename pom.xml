@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>io.github.co-pine</groupId>
+    <groupId>io.github.yuyuanweb</groupId>
     <artifactId>message-sdk</artifactId>
     <version>0.0.5</version>
     <name>message-sdk</name>
@@ -179,14 +179,14 @@
     </distributionManagement>
 
     <!--项目访问url -->
-    <url>https://github.com/co-pine/message-sdk</url>
+    <url>https://github.com/yuyuanweb/message-sdk</url>
     <scm>
         <!--项目访问url -->
-        <url>https://github.com/co-pine/message-sdk</url>
+        <url>https://github.com/yuyuanweb/message-sdk</url>
         <!--项目访问url.git结尾 -->
-        <connection>git@github.com:co-pine/message-sdk.git</connection>
+        <connection>git@github.com:yuyuanweb/message-sdk.git</connection>
         <!--项目访问url.git结尾 -->
-        <developerConnection>git@github.com:co-pine/message-sdk.git</developerConnection>
+        <developerConnection>git@github.com:yuyuanweb/message-sdk.git</developerConnection>
     </scm>
 
     <developers>
@@ -195,7 +195,7 @@
             <name>pine</name>
             <email>2268143474@qq.com</email>
             <!--项目访问url -->
-            <url>https://github.com/co-pine/message-sdk</url>
+            <url>https://github.com/yuyuanweb/message-sdk</url>
             <timezone>+8</timezone>
         </developer>
     </developers>

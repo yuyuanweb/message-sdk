@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
- * 微信机器人消息发送器
+ * 企微消息发送类
  *
  * @author yuyuan
  */

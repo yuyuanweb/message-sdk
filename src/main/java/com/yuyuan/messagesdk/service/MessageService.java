@@ -3,10 +3,11 @@ package com.yuyuan.messagesdk.service;
 import com.yuyuan.messagesdk.model.dto.Message;
 
 /**
+ * 消息发送接口
+ *
  * @author pine
  */
 public interface MessageService {
-
 
 
     /**

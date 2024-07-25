@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * Spring 上下文获取工具
  *
- * @author https://github.com/liyupi
+ * @author pine
  */
 @Component
 public class SpringContextUtil implements ApplicationContextAware {
@@ -25,9 +25,6 @@ public class SpringContextUtil implements ApplicationContextAware {
 
     /**
      * 通过名称获取 Bean
-     *
-     * @param beanName
-     * @return
      */
     public static Object getBean(String beanName) {
         return applicationContext.getBean(beanName);
@@ -35,10 +32,6 @@ public class SpringContextUtil implements ApplicationContextAware {
 
     /**
      * 通过 class 获取 Bean
-     *
-     * @param beanClass
-     * @param <T>
-     * @return
      */
     public static <T> T getBean(Class<T> beanClass) {
         return applicationContext.getBean(beanClass);
@@ -46,11 +39,6 @@ public class SpringContextUtil implements ApplicationContextAware {
 
     /**
      * 通过名称和类型获取 Bean
-     *
-     * @param beanName
-     * @param beanClass
-     * @param <T>
-     * @return
      */
     public static <T> T getBean(String beanName, Class<T> beanClass) {
         return applicationContext.getBean(beanName, beanClass);
@@ -62,7 +50,7 @@ public class SpringContextUtil implements ApplicationContextAware {
      * @param clazz clazz 类型
      * @return {@link Map}<{@link String}, {@link T}>
      */
-    public static <T> Map<String, T> getBeansByType(Class<T>  clazz) {
+    public static <T> Map<String, T> getBeansByType(Class<T> clazz) {
         return applicationContext.getBeansOfType(clazz);
     }
 

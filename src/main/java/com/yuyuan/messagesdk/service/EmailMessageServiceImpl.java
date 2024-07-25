@@ -12,6 +12,8 @@ import java.math.BigDecimal;
 import java.util.List;
 
 /**
+ * 邮件消息发送类
+ *
  * @author pine
  */
 @Service

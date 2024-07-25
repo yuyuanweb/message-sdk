@@ -3,7 +3,7 @@ package com.yuyuan.messagesdk.model.dto;
 import lombok.Data;
 
 /**
- * 消息
+ * 企微消息
  *
  * @author cq
  * @since 2023/12/21

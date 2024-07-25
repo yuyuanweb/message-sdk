@@ -8,6 +8,8 @@ import me.chanjar.weixin.mp.bean.template.WxMpTemplateMessage;
 import me.chanjar.weixin.mp.util.json.WxMpTemplateMessageGsonAdapter;
 
 /**
+ * 微信模版消息
+ *
  * @author pine
  */
 @EqualsAndHashCode(callSuper = true)
@@ -19,6 +21,11 @@ public class MpMessage extends WxMpTemplateMessage implements Message {
     @Override
     public String toJson() {
         return gson.toJson(this);
+    }
+
+    @Override
+    public String toString() {
+        return toJson();
     }
 
 }
