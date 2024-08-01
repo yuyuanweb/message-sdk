@@ -1,3 +1,32 @@
 spring:
   profiles:
     active: local
+tencent:
+  # 腾讯短信服务
+  sms:
+    secretId: xxx
+    secretKey: xxx
+    sdkAppId: xxx
+    signName: xxx
+  ses:
+    secretId: xxx
+    secretKey: xxx
+    user: xxx
+    password: xxx
+    nickName: xxx
+notify:
+  workwx:
+    webhook: xxx
+wx:
+  mp:
+    token: xxx
+    appId: xxx
+    aesKey:
+    secret: xxx
+    config-storage:
+      http-client-type: HttpClient
+      key-prefix: xxx
+      redis:
+        host: 127.0.0.1
+        port: 6379
+      type: Memory
