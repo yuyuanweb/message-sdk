@@ -49,6 +49,10 @@ wx:
 如上图示例配置所示，目前支持 **短信、邮箱、企微、微信服务号** 四种方式，在使用某种方式之前，需要先填入对应的配置
 
 ### 测试使用
+> **重要:** 当不需要使用微信服务号推送时，请在 @SpringBootApplication 上排除 wxJava 的自动装配
+> ```java
+> @SpringBootApplication(exclude = {WxMpAutoConfiguration.class})
+> ```
 ```java
 @SpringBootTest
 class MessageSdkApplicationTests {
