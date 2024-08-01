@@ -25,13 +25,13 @@ import java.util.List;
 @Service
 public class SmsMessageServiceImpl implements MessageService {
 
-    @Value("${tencent.sms.secretId}")
+    @Value("${tencent.sms.secretId:}")
     private String secretId;
-    @Value("${tencent.sms.secretKey}")
+    @Value("${tencent.sms.secretKey:}")
     private String secretKey;
-    @Value("${tencent.sms.sdkAppId}")
+    @Value("${tencent.sms.sdkAppId:}")
     private String sdkAppId;
-    @Value("${tencent.sms.signName}")
+    @Value("${tencent.sms.signName:}")
     private String signName;
 
     public final Class<SmsMessage> MESSAGE_CLASS = SmsMessage.class;

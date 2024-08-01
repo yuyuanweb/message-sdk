@@ -20,13 +20,13 @@ import java.util.List;
 @Slf4j
 public class EmailMessageServiceImpl implements MessageService {
 
-    @Value("${tencent.ses.user}")
+    @Value("${tencent.ses.user:}")
     private String emailUser;
 
-    @Value("${tencent.ses.password}")
+    @Value("${tencent.ses.password:}")
     private String emailPassword;
 
-    @Value("${tencent.ses.nickName}")
+    @Value("${tencent.ses.nickName:}")
     private String emailNick;
 
     public final Class<MailMessage> MESSAGE_CLASS = MailMessage.class;

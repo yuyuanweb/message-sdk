@@ -5,6 +5,7 @@ import com.yuyuan.messagesdk.model.dto.MpMessage;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.api.WxMpTemplateMsgService;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -15,6 +16,7 @@ import javax.annotation.Resource;
  * @author pine
  */
 @Service
+@ConditionalOnBean(name = {"wxMpService"})
 public class MpMessageServiceImpl implements MessageService {
 
     @Resource
