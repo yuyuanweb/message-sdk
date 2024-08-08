@@ -6,7 +6,7 @@
 ## 快速开始
 
 ### 引入依赖
-> 当前最新版本是 0.0.5
+> 当前最新版本是 0.0.6
 ```xml
 <dependency>
     <groupId>io.github.yuyuanweb</groupId>
